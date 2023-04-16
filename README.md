@@ -1,5 +1,7 @@
 Naziv aplikacije: Buy&Sell
+
 Članovi tima: Martina Rubil
+
 Fakultet informatike u Puli (https://fipu.unipu.hr/fipu)
 
 Kolegij: Programsko inženjerstvo (https://fiputreca.notion.site/fiputreca/Programsko-in-enjerstvo-e353945331df468e8382cdad1e91c4b8)
