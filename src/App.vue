@@ -1,9 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <!-- Image and text -->
+    <nav
+      id="nav"
+      class="navbar navbar-light bg-light"
+      style="padding-left: 30px; padding-right: 30px"
+    >
+      <a class="navbar-brand" href="#"> Buy&Sell </a>
+
+      <router-link to="/">Home</router-link> |
+      <router-link to="/Login">Prijava</router-link> |
+      <router-link to="/SignUp">Registracija</router-link>
+    </nav>
+    <div class="container">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
@@ -12,7 +24,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
 }
 
 nav {
@@ -20,10 +32,10 @@ nav {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #4249ef;
     }
   }
 }
