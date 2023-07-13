@@ -15,11 +15,14 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+        <li v-if="!store.currentUser" class="nav-item">
           <router-link to="/Login" class="nav-link">Login</router-link>
         </li>
-        <li class="nav-item">
+        <li v-if="!store.currentUser" class="nav-item">
           <router-link to="/SignUp" class="nav-link">Registracija</router-link>
+        </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <a href="#" @click.prevent="logout()" class="nav-link">Odjava</a>
         </li>
       </ul>
     </nav>
@@ -51,3 +54,51 @@ nav {
   }
 }
 </style>
+
+<script>
+import store from "@/store";
+import { firebase } from "@/firebase";
+import router from "@/router";
+
+firebase.auth().onAuthStateChanged((user) => {
+  const currentRoute = router.currentRoute;
+
+  //console.log('PROVJERA STANJA LOGINA!');
+  if (user) {
+    // User is signed in.
+    console.log("*** User", user.email);
+    store.currentUser = user.email;
+
+    if (!currentRoute.meta.needsUser) {
+      router.push({ name: "home" });
+    }
+  } else {
+    // User is not signed in.
+    console.log("*** No user");
+    store.currentUser = null;
+
+    if (currentRoute.meta.needsUser) {
+      router.push({ name: "login" });
+    }
+  }
+});
+
+export default {
+  name: "app",
+  data() {
+    return {
+      store,
+    };
+  },
+  methods: {
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.push({ name: "login" });
+        });
+    },
+  },
+};
+</script>
