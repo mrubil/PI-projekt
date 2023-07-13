@@ -63,7 +63,7 @@ import router from "@/router";
 firebase.auth().onAuthStateChanged((user) => {
   const currentRoute = router.currentRoute;
 
-  //console.log('PROVJERA STANJA LOGINA!');
+  console.log("PROVJERA STANJA LOGINA!");
   if (user) {
     // User is signed in.
     console.log("*** User", user.email);
