@@ -3,14 +3,25 @@
     <!-- Image and text -->
     <nav
       id="nav"
-      class="navbar navbar-light bg-light"
+      class="navbar navbar-expand-md navbar-light bg-light"
       style="padding-left: 30px; padding-right: 30px"
     >
-      <a class="navbar-brand" href="#"> Buy&Sell </a>
-
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Login">Prijava</router-link> |
-      <router-link to="/SignUp">Registracija</router-link>
+      <a class="navbar-brand" href="#">
+        Buy<font color="#4249ef">&</font>Sell
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <router-link to="/" class="nav-link">Home</router-link>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <router-link to="/Login" class="nav-link">Login</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/SignUp" class="nav-link">Registracija</router-link>
+        </li>
+      </ul>
     </nav>
     <div class="container">
       <router-view />

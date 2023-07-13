@@ -1,76 +1,46 @@
 <template>
   <div class="about">
-    <section class="vh-100" style="background-color: #4249ef">
-      <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div class="container h-100">
-          <div
-            class="row d-flex justify-content-center align-items-center h-100"
-          >
-            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div class="card" style="border-radius: 15px">
-                <div class="card-body p-5">
-                  <h2 class="text-uppercase text-center mb-5">Registracija</h2>
+    <h1>This is a signup page</h1>
 
-                  <form>
-                    <div class="form-outline mb-4">
-                      <input
-                        type="username"
-                        id="form3Example1cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example1cg"
-                        >Korisničko ime</label
-                      >
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="email"
-                        id="form3Example3cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example3cg"
-                        >Email adresa</label
-                      >
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="text"
-                        id="form3Example4cg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example4cg"
-                        >Grad</label
-                      >
-                    </div>
-
-                    <div class="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form3Example4cdg"
-                        class="form-control form-control-lg"
-                      />
-                      <label class="form-label" for="form3Example4cdg"
-                        >Lozinka</label
-                      >
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-block btn-lg text-body"
-                      >
-                        Registriraj se
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted">
+              We'll never share your email with anyone else.
+            </small>
           </div>
-        </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword2">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword2"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-    </section>
+      <div class="col"></div>
+    </div>
   </div>
 </template>
